@@ -1,0 +1,27 @@
+<!-- filepath: c:\Users\DELL\Downloads\email_classification\templates\home.html -->
+<html>
+    <head>
+        <title>Email Classifier</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Email Classifier</h1>
+            <form action="/predict" method="POST">
+                <label for="email_message">Enter your email:</label>
+                <textarea id="email_message" name="email_message" rows="5" placeholder="Type your email here..." required></textarea>
+                <button type="submit">Classify</button>
+            </form>
+            {% if prediction %}
+                <div class="result">
+                    <h2>Prediction: {{ prediction }}</h2>
+                </div>
+            {% elif message %}
+                <div class="error">
+                    <h2>{{ message }}</h2>
+                </div>
+            {% endif %}
+        </div>
+        <script src="{{ url_for('static', filename='home.js') }}"></script>
+    </body>
+</html>
