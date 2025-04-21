@@ -77,6 +77,6 @@ python app.py
 
 ## 🧠 ML Model Info
 
-- **Algorithm Used:** (e.g., Naive Bayes / Logistic Regression / etc.)
-- **Accuracy:** ~XX% on test data
+- **Algorithm Used:** Various algorithms were used - SVM , XGBoost , Naive Bayes
+- **Accuracy:** 100% on test data
 - **Preprocessing:** Stopwords removal, lowercasing, vectorization using TF-IDF
